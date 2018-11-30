@@ -18,52 +18,197 @@ body {
     min-height: 100%;
 }
 
+/* all setting end */
+
+/* modules setting */
+.box {
+    color:#108BFF;
+    border: 1px solid;
+    box-shadow: 2px 2px 3px #108BFF;
+    margin: 0.5rem 0 0;
+}
+
+ul {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+
+/* modules setting end */
+
 header {
     background-color: #BDCC21;
-    padding: 1rem;
+    padding:  0.4rem 1rem ;
+    text-align: center;
 }
 
 header h1 {
-    margin-top: 0;
-    margin-bottom: 1rem;
     letter-spacing: 0.1em;
-    color: #108BFF;
-    padding-left: 1rem;
+    color: #FFF;
     margin: 0;
     
 }
-header nav {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+
+header p {
+   color: #FFF;
+   font-size: 1.3rem; 
+   margin: 0.5rem 0 0;
 }
 
-header nav a {
+.topnav {
+    position: relative;
+}
+
+/*
+.topnav nav {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #1D6AB2;
+}
+
+*/
+
+nav a,.topnav a {
     display: block;
-    text-align: center;
+    color: #FFF;
+    background-color: #108BFF;
     text-decoration: none;
-    color: #fff;
     font-size: 1.3rem;
     line-height: 2;
     letter-spacing: 0.1rem;
     font-weight: 500;
-    margin: 0.3rem 0;
     padding: 0.1rem 1rem;
 }
 
 
-header nav a:first-child {
+.topnav a:not(:last-child) {
+    border-bottom: 1px solid #1D6AB2;
 }
+
+nav a:hover {
+    color: #FFF;
+    background-color: #1D6AB2;
+
+}
+
+.topnav a:active, .topnav a.active {
+    color: #FFF;
+    background-color: #1D6AB2;
+} 
+
+.topnav a.icon {
+    position: absolute;
+    background-color: #1D6AB2;
+    right: 0;
+    top: 0;
+}
+
+.topnav nav {
+    display: none;
+}
+
 
 main {
     display: block;
     background-color: #FFF;
+    padding: 0.4rem 0.6rem ;
     flex: 1;
+    flex-direction: column;
+}
+
+main div.statu {
+    background-color: #BDCC21;
+}
+main div.statu img {
+    display: block;
+    max-width: 100%;
+}
+main div.statu .data-wrap {
+    background-color: #A3B202;
+    padding: 0.3rem;
+}
+
+main div.statu .data-wrap h2 {
+    text-align: center;
+    color: #FFF ;
+}
+
+main div.statu .data-wrap .data {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+}
+
+main div.statu .data-wrap .data .data-item {
+    flex: 1 1 40%;
+    text-align: center;
+    color: #FFF;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    margin: 0.3rem;
+    border: 1px solid #108BFF;
+}
+
+main div.statu .data-wrap .data .data-item span {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    font-weight: 600;
+    color: #108BFF;
+    padding: 0.3rem;
+    border: 0.2rem solid;
+    transition: all 0.5s;
+}
+
+main div.statu .data-wrap .data .data-item span:hover {
+    font-size: 1.8rem;
+    background-color: #108BFF;
+    color: #FFF;
+}
+
+main div.show {
+    display: flex;
+    flex-direction: column;
+}
+
+main div.show-item {
+    padding: 0.3rem;
+    flex: 1;
+    transition: all 1s;
+}
+
+main div.show-item h2 {
+    text-align: center;
+    color: #1D6AB2 ;
+}
+
+main div.show-item:hover h2, main div.show-item:hover li{
+     transform: scale(1.1);
+}
+main div.show-item:hover {
+     background-color: #108BFF;
+     color: #FFF;
+}
+
+main div.show-item:hover h2 {
+     color: #FFF;
 }
 
 footer {
+    padding: 0.4rem 0.6rem ;
     background-color: #A3B202;
-    height: 100px;
+    display: flex;
+    direction: column;
+    color: #FFF;
 }
 
+footer h3 {
+    display: inline-block;
+    padding-bottom: 0.2em;
+    font-size: 1.2rem;
+    color: #FFF;
+    border-bottom: 0.2em solid #108BFF;
+}
 

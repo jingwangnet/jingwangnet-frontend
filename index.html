@@ -3,29 +3,108 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content=IE="edge">
-  <meta name="viewport" content="device-width, initial-scale=1.0"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>静网数据|一切为业务服务</title>
   <link href="https://cdn.bootcss.com/normalize/8.0.0/normalize.css" rel="stylesheet">
+  <link crossorigin="anonymous" integrity="sha384-FckWOBo7yuyMS7In0aXZ0aoVvnInlnFMwCv77x9sZpFgOonQgnBj1uLwenWVtsEj" href="https://lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet"> 
 </head>
 <body>
   <header>
   <h1>静网数据</h1>
-  <nav>
-    <a href="#">主页</a>
-    <a href="#">行业</a>
-    <a href="#">公司</a>
-    <a href="#">关于</a>
-    <a href="#">联系</a>
-  </nav>
+  <p>一切为业务服务</p>
   </header>
   
+  <div class="topnav">
+    <a href="#" id="logo">静网数据</a>
+    <nav id="nav">
+      <a href="#" class="active">主页</a>
+      <a href="#">行业</a>
+      <a href="#">公司</a>
+      <a href="#">关于</a>
+      <a href="#">联系</a>
+    </nav>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
   <main>
-  main
+    <div class="statu box">
+    <img src="img/status.png" alt="status-img"> 
+    <div class="data-wrap">
+      <h2>今日数据监测</h2>
+      <div class="data">
+         <div class="data-item box">
+           <p><span class="count">123</span>&nbsp;公司</p>
+         </div>
+         <div class="data-item box">
+           <p><span class="count">23</span>&nbsp;行业</p>
+         </div>
+         <div class="data-item box">
+           <p><span class="count">123</span>&nbsp;需求</p>
+         </div>
+         <div class="data-item box">
+           <p><span class="count">123</span>&nbsp;联系人</p>
+         </div>
+      </div>
+    </div>
+    </div>
+    <div class="show">
+      <div class="show-item box">
+        <h2>数据真实</h2>    
+        <ul>
+           <li>所有数据均来自于联系人公开名片</li>
+           <li>定期动态更新联系人状态</li>
+        </ul>
+      </div>
+      <div class="show-item box">
+        <h2>精准数据</h2>    
+        <ul>
+           <li>联系人职位 级别 电话 负责项目一应俱全</li>
+           <li>有的放矢 工厂需求展示</li>
+        </ul>
+      </div>
+      <div class="show-item box">
+        <h2>合作共赢</h2>    
+        <ul>
+           <li>合之以诚，作之共荣。</li>
+           <li>互信共荣，合力同辉。</li>
+        </ul>
+      </div>
+      <div class="show-item box">
+        <h2>免费使用</h2>    
+        <ul>
+           <li>免费交换联系方式</li>
+        </ul>
+      </div>
+    </div>
+    
   </main>
   
   <footer>
-  footer
+  <div class="contact">
+    <h3>联系方式</h3>
+    <nav>
+      <ul>
+        <li>微信: jingwang-net</li>
+        <li>电话: +1(929)900 5542</li>
+        <li>邮箱: admin@jingwangnet.com</li>
+        <li>网站: jingwang.me</li>
+      </ul>
+    </nav>
+  </div>
+  
   </footer>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("nav");
+      if (x.style.display === "block") {
+         x.style.display = "none";
+      } else {
+         x.style.display = "block";
+      }
+    }
+  </script>
 </body>
 </html>
