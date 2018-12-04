@@ -51,19 +51,16 @@
 >
 >            * **div.card \* N**
 >
->              *  card-inner
+>              * card-inner
 >
->                *  div.card-front
+>                * div.card-front
 >
->                  * div.card-ront-aside
+>                     * div.card-ront-aside
+>                         *  span.num
 >
->                    * span.num
->
->                  * ul.company-info
->
->                    * **li.card-title** 
->
->                    * **li \* 3**
+>                     * ul.company-info
+>                         * **li.card-title** 
+>                         * **li \* 3**
 >
 >        * div.tabcontent#Industry
 >
