@@ -338,6 +338,11 @@ main div.recent div.tab-wrapper .tab button.active {
     margin: 0.3rem;
 }
 
+#Need .card-wrapper .card, #Industry .card-wrapper .card{
+    height: 8rem;
+
+}
+
 @media screen and (min-width: 321px) {
     .card-wrapper .card {
     height: 8.6rem;
@@ -369,7 +374,7 @@ main div.recent div.tab-wrapper .tab button.active {
 
 
 
-.card  li.company-name {
+.card li.card-title {
     font-weight: 600;
     font-size: 1.1rem;
 }
@@ -394,8 +399,8 @@ main div.recent div.tab-wrapper .tab button.active {
 .card .card-inner .card-front  {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     color: black;
+    align-items: center;
 }
 
 
@@ -405,7 +410,7 @@ main div.recent div.tab-wrapper .tab button.active {
     text-align: center;
 }
 
-#Company .card .card-inner .card-front  .card-front-aside  span.num {
+.card .card-inner .card-front  .card-front-aside  span.num {
     font-size: 3rem;
     font-weight: 600;
     padding: 0.3rem;
@@ -465,6 +470,13 @@ main div.recent div.tab-wrapper .tab button.active {
     }
 
 }
+
+#Industry .card-wrapper .card .card-inner .card-front ul.company-info,
+#Need .card-wrapper .card .card-inner .card-front ul.company-info{
+    align-self: flex-start;
+    padding-top: 1rem;
+}
+
 /* card wrapper end */
 
 footer {
@@ -523,5 +535,4 @@ footer #wechat {
     max-width: 100%;
     background-color: #FFF;
 }
-
 
