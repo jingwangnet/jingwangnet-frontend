@@ -463,6 +463,10 @@ main div.recent div.tab-wrapper .tab button.active {
     padding-top: 0.3em;
 }
 
+.card .card-inner .card-back ul.person-info li {
+    font-size: 0.8rem;
+}
+
 @media screen and (min-width: 321px) {
     .card .card-inner .card-back ul.person-info {
         flex: 1 1 50%; 
@@ -535,4 +539,3 @@ footer #wechat {
     max-width: 100%;
     background-color: #FFF;
 }
-
