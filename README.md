@@ -1,5 +1,13 @@
 # 静网数据前端&设计
 
+## 预览
+> [查看全部 预览图](http://https://github.com/jingwangnet/jingwangnet-frontend/tree/master/screen_shot  "查看所有预览图")  
+> ### 首页预览
+>
+> ![首页图片1](screen_shot/index/index-3.png)
+> ![首页图片1](screen_shot/index/index-6.png)
+> ![首页图片1](screen_shot/index/index-7.png)
+
 ## 布局
 
 > ### index.html
