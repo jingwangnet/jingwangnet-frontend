@@ -2,33 +2,25 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta http-equiv="X-UA-Compatible" content=IE="edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>静网数据|一切为业务服务</title>
+  <title>静网数据|所有公司</title>
   <link href="https://cdn.bootcss.com/normalize/8.0.0/normalize.css" rel="stylesheet">
   <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
-  <link href="css/main.css" rel="stylesheet"> 
-  <script>
-  function isIE() { //ie?
-    if (!!window.ActiveXObject || "ActiveXObject" in window)
-      return window.alert("ie浏览器功能严重缺失，为了更好的使用体验，请使用非ie浏览器访问");
-    }
-
-    window.onload=isIE()
-  </script>
+  <link href="../css/main.css" rel="stylesheet"> 
 </head>
 <body>
   <header>
   <h1>静网数据</h1>
   <p>一切为业务服务</p>
   </header>
-  <div id="outdate"></div> 
+  
   <div class="topnav">
     <a href="#" id="logo">静网数据</a>
     <nav id="nav">
-      <a href="#" class="active">主页</a>
+      <a href="../" class="active">主页</a>
+      <a href="#">公司</a>
       <a href="#">行业</a>
-      <a href="category/company.html">公司</a>
       <a href="#">关于</a>
       <a href="#">联系</a>
     </nav>
@@ -38,64 +30,9 @@
   </div>
 
   <main>
-    <!-- statu start -->
-    <div class="statu">
-      <img src="img/status.png" alt="status-img"> 
-      <div class="data-wrap">
-        <h2>今日数据监测</h2>
-        <div class="data">
-           <div class="data-item">
-             <span class="data-item-count">123</span><span class="data-item-info">公司</span>
-           </div>
-           <div class="data-item">
-             <span class="data-item-count">23</span><span class="data-item-info">行业</span>
-           </div>
-           <div class="data-item">
-             <span class="data-item-count">123</span><span class="data-item-info">需求</span>
-           </div>
-           <div class="data-item">
-             <span class="data-item-count">123</span><span class="data-item-info">联系人</span>
-           </div>
-        </div>
-      </div>
-    </div>
-    <!-- statu end-->
-
-    <!-- show start -->
-    <div class="show">
-      <div class="show-item box">
-        <h2>数据真实</h2>    
-        <ul>
-           <li>所有数据均来自于联系人公开名片,真实有效。</li>
-           <li>定期动态更新联系人状态。</li>
-        </ul>
-      </div>
-      <div class="show-item box">
-        <h2>精准数据</h2>    
-        <ul>
-           <li>联系人职位 级别 电话 负责项目一应俱全。</li>
-           <li>有的放矢，工厂需求展示。</li>
-        </ul>
-      </div>
-      <div class="show-item box">
-        <h2>合作共赢</h2>    
-        <ul>
-           <li>合之以诚，作之共荣。</li>
-           <li>互信共荣，合力同辉。</li>
-        </ul>
-      </div>
-      <div class="show-item box">
-        <h2>免费使用</h2>    
-        <ul>
-           <li>免费交换联系方式</li>
-        </ul>
-      </div>
-    </div>
-    <!-- statu end -->
-
     <!-- recent start -->
-    <div class="recent">
-      <h2>最近添加</h2>
+    <div class="recent list">
+      <h2>公司列表</h2>
       <div class="tab-wrapper">
         <div class="tab">
           <button class="tablinks" onclick="openSelect(event, 'Company')" id="defaultOpen">公司</button>
@@ -113,7 +50,7 @@
           </div>
           <div class="card-header">
              <h3>最近添加的公司</h3>
-             <p><a href="category/company.html">查看所有公司</a></p>
+             <p>查看所有公司</p>
           </div>
           <div class="card-wrapper">
              <!-- card start -->
@@ -241,7 +178,7 @@
                <div class="card-inner">
                   <div class="card-front">
                     <div class="card-front-aside">
-                       <img src="img/women.png" alt="Avatar_women">
+                       <img src="../img/women.png" alt="Avatar_women">
                     </div>
                     <ul class="company-info">
                        <li class="card-title pe">武汉浦江沿浦汽车零部件有限公司</li>
@@ -275,7 +212,7 @@
                <div class="card-inner">
                   <div class="card-front">
                     <div class="card-front-aside">
-                       <img src="img/men.png" alt="Avatar_man">
+                       <img src="../img/men.png" alt="Avatar_man">
                     </div>
                     <ul class="company-info">
                        <li class="card-title pe">世亚（湖北）汽车零部件有限公司</li>
@@ -315,7 +252,7 @@
     <h3>联系方式</h3>
     <nav>
       <ul>
-        <li><i class="fa fa-wechat"></i><a href="javascript:void(0);" id="wechat">jingwang-net<span><img src="img/wechat.png" alt="wechatqr" /></span></a></li>
+        <li><i class="fa fa-wechat"></i><a href="javascript:void(0);" id="wechat">jingwang-net<span><img src="../img/wechat.png" alt="wechatqr" /></span></a></li>
         <li><i class="fa fa-address-book"></i><a href="tel:+19299005542">+1 (929) 900 5542</a></li>
         <li><i class="fa fa-envelope"></i><a href="mailto:admin@jingwangnet.com?subject=来信目的&body=事务繁忙，来信请直接表明来意并附上个人名片信息。无个人信息恕不回信。">admin@jingwangnet.com</a></li>
         <li><i class="fa fa-internet-explorer"></i><a href="http://jingwangnet.com" target="_blank">jingwangnet.com</a></li>
@@ -324,8 +261,9 @@
   </div>
   
   </footer>
-  <script src="js/main.js"></script>
+  <script src="../js/main.js"></script>
   <script>
+
     function openSelect(evt, obj) {
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
@@ -344,7 +282,6 @@
 
     document.getElementById("defaultOpen").click();
   </script>
-
 </body>
 </html>
 

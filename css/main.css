@@ -27,15 +27,16 @@ body {
     margin: 0.5rem 0 0;
 }
 
+
 ul {
    margin: 0;
    padding: 0;
-   list-style: none;
 }
 
 ul li {
     line-height: 1.5;
     font-size: 0.8rem;
+    list-style-type: none;
 }
 
 i.fa {
@@ -159,6 +160,7 @@ main div.statu {
 main div.statu img {
     display: block;
     max-width: 100%;
+    margin: 0 auto;
 }
 main div.statu .data-wrap {
     background-color: #A3B202;
@@ -275,14 +277,14 @@ main div.recent h2 {
 }
 
 main div.recent div.tab-wrapper .tab {
-    background: #108BFF;
+    background: inherit;
     display: flex;
     flex-wrap: wrap;
 
 }
 
 main div.recent div.tab-wrapper .tab button {
-    background-color: inherit;
+    background-color: #108BFF;
     flex: 1;
     cursor: pointer; 
     text-align: center;
@@ -294,6 +296,8 @@ main div.recent div.tab-wrapper .tab button {
     outline: none;
 
 }
+
+
 
 main div.recent div.tab-wrapper .tab button:hover {
     color: #FFF;
@@ -347,7 +351,7 @@ main div.recent div.tab-wrapper .tab button.active {
     background-color: transparent;
     border: 1px solid #f1f1f1;
     perspective: 1000px;
-    height: 9.2rem;
+    height: 11rem;
     margin: 0.3rem;
 }
 
@@ -366,36 +370,35 @@ main div.recent div.tab-wrapper .tab button.active {
 /* card-inner start */
 .card-wrapper .card .card-inner  {
     position: relative;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
     width: 100%;
     height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
 }
+
 
 #Contacter .card:hover .card-inner {
     transform: rotateY(180deg);
 }
 
-
 .card-front, .card-back {
     position: absolute;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
     width: 100%;
     height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 
-
-.card li.card-title {
+.card .card-inner  li.card-title {
     font-weight: 600;
     font-size: 1.1rem;
 }
 
-
 /* card-inner end */
 
 /* card-inner card-front start */
+
 
 .card-front::before {
     content: '';
@@ -403,10 +406,10 @@ main div.recent div.tab-wrapper .tab button.active {
     top: 0; right: 0; bottom: 0; left: 0;
     background-image: url('../img/wechat.png');
     background-size: 55px;
-    background-position: 98% 68%;
+    background-position: 98% 60%;
     background-repeat: no-repeat;
+    backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-
 }
 
 .card .card-inner .card-front  {
@@ -443,11 +446,11 @@ main div.recent div.tab-wrapper .tab button.active {
 /* card-inner card-front start */
 
 
-
 #Contacter .card-back {
+    background-color: #eee;
     transform: rotateY(180deg);
-
 }
+
 
 .card-back::before {
     content: '';
@@ -456,9 +459,8 @@ main div.recent div.tab-wrapper .tab button.active {
     z-index: -1;
     background-image: url('../img/wechat.png');
     background-size: 55px;
-    background-position:  0% 90%;
+    background-position:  0% 97%;
     background-repeat: no-repeat;
-
 }
 
 .card .card-inner .card-back  {
@@ -471,7 +473,7 @@ main div.recent div.tab-wrapper .tab button.active {
     padding: 0 0.2rem;
 }
 .card .card-inner .card-back ul.person-info {
-    flex: 1 1 70%; 
+    flex: 1 1 80%; 
     align-self: flex-start;
     padding-top: 0.3em;
 }
@@ -480,13 +482,15 @@ main div.recent div.tab-wrapper .tab button.active {
     font-size: 0.8rem;
 }
 
+
 @media screen and (min-width: 321px) {
     .card .card-inner .card-back ul.person-info {
-        flex: 1 1 50%; 
+        flex: 1 1 60%; 
         align-self: flex-start;
     }
 
 }
+
 
 #Industry .card-wrapper .card .card-inner .card-front ul.company-info,
 #Need .card-wrapper .card .card-inner .card-front ul.company-info{
