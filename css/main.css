@@ -45,7 +45,7 @@ i.fa {
     text-align: center;
 }
 
-a {
+a:not(.icon) {
     display: inline-block;
     color: #108BFF;
     font-size: 0.9rem;
@@ -77,12 +77,12 @@ a:hover {
 /* modules setting end */
 
 header {
-    background-color: #BDCC21;
     text-align: center;
     height: 6rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: #1D6AB2;
 }
 
 header h1 {
@@ -100,9 +100,8 @@ header p {
 .topnav {
     position: relative;
     z-index: 2;
-    
+    box-sizing: content-box;
 }
-
 
 @supports ( position: sticky) {
     .topnav {
@@ -159,17 +158,94 @@ nav a:hover {
     display: none;
 }
 
+@media screen and (min-width: 1000px) {
+    .topnav {
+        padding: 0 calc(50% - 480px); 
+        background-color: #108BFF;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .topnav a:not(:last-child) {
+        border-bottom: none;
+    }
+    .topnav a.icon {
+        display: none;
+    }
+
+    .topnav nav {
+        flex: 1 1 auto;
+        display: flex;
+    }
+    .topnav nav a:first-child {
+        margin-left: auto;
+    }
+
+     .topnav a {
+        display: block;
+        color: #FFF;
+        background-color: #108BFF;
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+        letter-spacing: 0.1rem;
+        font-weight: 500;
+        padding: 0.4rem 1rem;
+        margin: 0.7rem 0;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .topnav {
+    padding: 0 calc(50% - 600px); 
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .topnav {
+    padding: 0 calc(50% - 700px); 
+    }
+}
 
 main {
     display: block;
     background-color: #FFF;
     padding: 0.4rem 0.6rem ;
+    margin-bottom: 1rem;
     flex: 1;
     flex-direction: column;
 }
 
+@media screen and (min-width: 1000px) {
+    main {
+    max-width: 1000px;
+    padding: 1em calc(50% - 480px); 
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    main {
+    max-width: 1300px;
+    padding: 1em calc(50% - 600px); 
+    }
+}
+@media screen and (min-width: 1920px) {
+    main {
+    max-width: 1600px;
+    padding: 1em calc(50% - 700px); 
+    }
+
+}
 main div.statu {
-    background-color: #BDCC21;
+    background-color: #108BFF;
+}
+
+@media screen and (min-width: 1000px) {
+    main div.statu {
+        display: flex;
+        flex-direction: row; 
+        flex-wrap: wrap;
+    }
 }
 main div.statu img {
     display: block;
@@ -177,8 +253,32 @@ main div.statu img {
     margin: 0 auto;
 }
 main div.statu .data-wrap {
-    background-color: #A3B202;
+    background-color: #1D6AB2;
     padding: 0.3rem 1rem;
+}
+
+@media screen and (min-width: 1000px) {
+    main div.statu img {
+        flex: 1 1 65%; 
+        max-width: 700px;
+    }
+    main div.statu .data-wrap {
+        flex: 1 1 auto; 
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    main div.statu .data-wrap {
+        flex: 1 1 auto; 
+        max-width: 300px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    main div.statu img {
+        flex: 1 1 75%; 
+        max-width: 100%;
+    }
 }
 
 main div.statu .data-wrap h2 {
@@ -191,10 +291,28 @@ main div.statu .data-wrap .data {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     align-content: space-between;
 }
 
+@media screen and (min-width: 1000px) {
+    main div.statu .data-wrap  {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        jistify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    
+    main div.statu .data-wrap h1 {
+       flex: 1 1 100%;
+    }
+    main div.statu .data-wrap .data {
+       flex: 1 1 100%;
+        flex-direction: column;
+    }
+}
 main div.statu .data-wrap .data .data-item {
     flex: 1 1 40%;
     color: #FFF;
@@ -248,12 +366,32 @@ main div.show {
     transition: all 0.7s;
 }
 
+@media screen and (min-width: 700px) {
+    main div.show {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        transition: all 0.7s;
+        justify-content: center;
+    }
+}
+
+
 main div.show-item {
     padding: 1rem;
     flex: 1;
     transition: all 1s;
+    margin: 0.3rem;
 }
 
+@media screen and (min-width: 700px) {
+    main div.show-item {
+        padding: 1rem;
+        flex: 1 1 40%;
+        transition: all 1s;
+        margin: 0.3rem;
+    }
+}
 
 main div.show-item h2 {
     text-align: center;
@@ -281,7 +419,7 @@ main div.show-item:hover h2 {
 
 
 main div.recent  {
-    background-color: #BDCC21;
+    background-color: #108BFF;
     margin: 1rem 0;
     padding: 1rem 0.4rem;
 }
@@ -360,6 +498,16 @@ main div.recent div.tab-wrapper .tab button.active {
     border: 1px solid black;
 }
 
+@media screen and (min-width: 700px) {
+    .tabcontent .card-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        border: 1px solid black;
+    }
+}
+
 /* card-wraper start */
 .card-wrapper .card {
     position: relative;
@@ -370,6 +518,13 @@ main div.recent div.tab-wrapper .tab button.active {
     margin: 0.3rem;
 }
 
+@media screen and (min-width: 700px) {
+    .card-wrapper .card {
+        flex: 1 1 40%;
+        max-width: 49%;
+        margin: 1rem;
+    }
+}
 #Contacter .card-wrapper .card .card-block{
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
@@ -542,12 +697,33 @@ margin-top: 1.7rem;
 
 footer {
     padding: 0.4rem 1rem  1rem;
-    background-color: #A3B202;
+    background-color: #1D6AB2;
     display: flex;
     flex-direction: column;
     color: #FFF;
 }
 
+@media screen and (min-width: 1000px) {
+    footer {
+        max-width: 1000px;
+        padding: 1em calc(50% - 480px); 
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    footer {
+    max-width: 1300px;
+    padding: 1em calc(50% - 600px); 
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    footer {
+    max-width: 1600px;
+    padding: 1em calc(50% - 700px); 
+    }
+
+}
 footer h3 {
     display: inline-block;
     padding-bottom: 0.2em;
