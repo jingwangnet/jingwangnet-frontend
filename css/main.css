@@ -211,9 +211,12 @@ main {
     display: block;
     background-color: #FFF;
     padding: 0.4rem 0.6rem ;
-    margin-bottom: 1rem;
     flex: 1;
     flex-direction: column;
+}
+
+div.show, div.data div.recent {
+    margin: 1rem 0;
 }
 
 @media screen and (min-width: 1000px) {
@@ -260,8 +263,10 @@ main div.statu .data-wrap {
 @media screen and (min-width: 1000px) {
     main div.statu img {
         flex: 1 1 65%; 
-        max-width: 700px;
+        max-width: 600px;
+        max-height: 600px;
     }
+
     main div.statu .data-wrap {
         flex: 1 1 auto; 
     }
@@ -277,7 +282,6 @@ main div.statu .data-wrap {
 @media screen and (min-width: 1920px) {
     main div.statu img {
         flex: 1 1 75%; 
-        max-width: 100%;
     }
 }
 
@@ -292,6 +296,20 @@ main div.statu .data-wrap .data {
     flex-wrap: wrap;
     justify-content: center;
     align-content: space-between;
+}
+
+
+main div.statu .data-wrap .data .data-item {
+    flex: 1 1 40%;
+    color: #FFF;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    margin: 0.3rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.7s;
+    display: flex;
+    flex-direction: wrap;
+    align-items: center;
 }
 
 @media screen and (min-width: 1000px) {
@@ -309,21 +327,10 @@ main div.statu .data-wrap .data {
        flex: 1 1 100%;
     }
     main div.statu .data-wrap .data {
+       display: flex;
        flex: 1 1 100%;
-        flex-direction: column;
+       flex-direction: row;
     }
-}
-main div.statu .data-wrap .data .data-item {
-    flex: 1 1 40%;
-    color: #FFF;
-    font-size: 1.4rem;
-    line-height: 1.4rem;
-    margin: 0.3rem;
-    padding: 0.5rem 1rem;
-    transition: all 0.7s;
-    display: flex;
-    flex-direction: wrap;
-    align-items: center;
 }
 
 /*
@@ -379,10 +386,14 @@ main div.show {
 
 main div.show-item {
     padding: 1rem;
+    font-size: 1.1rem;
     flex: 1;
     transition: all 1s;
     margin: 0.3rem;
+    display: flex;
+    flex-direction: row;
 }
+
 
 @media screen and (min-width: 700px) {
     main div.show-item {
@@ -401,26 +412,38 @@ main div.show-item h2 {
 
 main div.show-item:hover h2{
     font-size: 1.5rem;
+     color: #FFF;
 
 } 
-main div.show-item:hover li{
-    font-size: 1.1rem;
-}
 
 main div.show-item:hover {
      background-color: #108BFF;
      color: #FFF;
 }
 
-main div.show-item:hover h2 {
-     color: #FFF;
+
+main div.show-item .show-item-aside {
+    max-width: 30%;
+    min-width: 30%;
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
+main div.show-item .show-item-aside i {
+    display: block;
+    font-size: 3rem;
+}
+
+main div.show-item .show-item-content {
+    flex:1;
+    text-align: center;
+}
 
 
 main div.recent  {
     background-color: #108BFF;
-    margin: 1rem 0;
     padding: 1rem 0.4rem;
 }
 main div.recent h2 {
