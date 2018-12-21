@@ -55,6 +55,8 @@ a:not(.icon) {
     font-weight: 500;
     padding: 0.1rem 0.5rem;
 }
+
+
 a:hover {
     color: #FFF;
     background-color: #108BFF;
@@ -132,7 +134,7 @@ nav a,.topnav a {
 }
 
 
-.topnav a:not(:last-child) {
+nav a:not(:last-child) {
     border-bottom: 1px solid #1D6AB2;
 }
 
@@ -411,9 +413,7 @@ main div.show-item h2 {
 
 
 main div.show-item:hover h2{
-    font-size: 1.5rem;
      color: #FFF;
-
 } 
 
 main div.show-item:hover {
@@ -726,10 +726,49 @@ footer {
     color: #FFF;
 }
 
+footer .contact {
+    flex: 1 1 auto;
+}
+
+footer .footer-aside {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+footer .footer-aside .footer-aside-content {
+    flex: auto;
+    max-width:150px ;     
+}
+footer .footer-aside img {
+    margin: 0.5rem 0;
+    display: block;
+    max-width:205px ;     
+    max-height:145px;
+    /*margin-left: auto;*/
+}
+
+@media screen and (min-width: 700px) {
+    footer {
+        flex-direction: row;
+    }
+
+}
 @media screen and (min-width: 1000px) {
     footer {
         max-width: 1000px;
         padding: 1em calc(50% - 480px); 
+        flex-direction: row;
+    }
+
+
+    footer .footer-aside img {
+        margin: 1rem;
+        display: block;
+        max-width:205px ;     
+        max-height:145px;
+        /*margin-left: auto;*/
     }
 }
 
@@ -747,6 +786,7 @@ footer {
     }
 
 }
+
 footer h3 {
     display: inline-block;
     padding-bottom: 0.2em;
