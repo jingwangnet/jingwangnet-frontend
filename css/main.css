@@ -620,7 +620,7 @@ margin-top: 1.7rem;
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
     background-image: url('../img/wechat.png');
-    background-size: 80px;
+    background-size: 70px;
     background-position: 98% 60%;
     background-repeat: no-repeat;
     backface-visibility: hidden;
@@ -681,7 +681,7 @@ margin-top: 1.7rem;
     top: 0; right: 0; bottom: 0; left: 0;
     z-index: -1;
     background-image: url('../img/wechat.png');
-    background-size: 80px;
+    background-size: 70px;
     background-position:  0% 97%;
     background-repeat: no-repeat;
 }
@@ -738,11 +738,11 @@ footer {
     color: #FFF;
 }
 
-footer .contact {
-    flex: 1 1 auto;
+footer div.contact {
+    flex:1 1 auto;
 }
 
-footer .footer-aside {
+footer div.footer-aside {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -754,7 +754,7 @@ footer .footer-aside .footer-aside-content {
     max-width:150px ;     
 }
 footer .footer-aside img {
-    margin: 0.5rem 0;
+    margin: auto 0;
     display: block;
     max-width:205px ;     
     max-height:145px;
@@ -776,7 +776,7 @@ footer .footer-aside img {
 
 
     footer .footer-aside img {
-        margin: 1rem;
+        margin: auto 0;
         display: block;
         max-width:205px ;     
         max-height:145px;
@@ -827,12 +827,30 @@ footer #wechat span {
     padding: 0.1rem 0.5rem;
 }
 
-footer #wechat figure {
+footer nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+footer nav  .qr {
+    flex: 1 1 auto;
+}
+
+@media screen and (min-width: 600px) {
+    footer nav .qr {
+        padding: 1rem;
+    }
+}
+
+
+footer nav figure {
     display: inline-block;
     text-align: center;
     margin: 0.25rem;
 }
-footer #wechat figure img {
+
+footer nav figure img {
     max-width: 8rem; 
 }
 footer li > i  {
