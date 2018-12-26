@@ -620,11 +620,17 @@ margin-top: 1.7rem;
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
     background-image: url('../img/wechat.png');
-    background-size: 55px;
+    background-size: 80px;
     background-position: 98% 60%;
     background-repeat: no-repeat;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+}
+
+@media screen and (max-width: 350px) {
+    .card-front::before{
+        background-size: 60px;
+    }
 }
 
 .card .card-inner .card-front  {
@@ -675,9 +681,15 @@ margin-top: 1.7rem;
     top: 0; right: 0; bottom: 0; left: 0;
     z-index: -1;
     background-image: url('../img/wechat.png');
-    background-size: 55px;
+    background-size: 80px;
     background-position:  0% 97%;
     background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 350px) {
+    .card-back::before {
+        background-size: 60px;
+    }
 }
 
 .card .card-inner .card-back  {
@@ -815,8 +827,12 @@ footer #wechat span {
     padding: 0.1rem 0.5rem;
 }
 
-footer #wechat img {
-    display: block;
+footer #wechat figure {
+    display: inline-block;
+    text-align: center;
+    margin: 0.25rem;
+}
+footer #wechat figure img {
     max-width: 8rem; 
 }
 footer li > i  {
