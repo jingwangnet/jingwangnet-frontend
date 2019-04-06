@@ -245,6 +245,11 @@ main div.statu {
     background-color: #108BFF;
 }
 
+main div.statu #map {
+    min-height: 500px;
+    margin: 0 auto;
+}
+
 @media screen and (min-width: 1000px) {
     main div.statu {
         display: flex;
@@ -252,20 +257,15 @@ main div.statu {
         flex-wrap: wrap;
     }
 }
-main div.statu img {
-    display: block;
-    max-width: 100%;
-    margin: 0 auto;
-}
+
 main div.statu .data-wrap {
     background-color: #1D6AB2;
     padding: 0.3rem 1rem;
 }
 
 @media screen and (min-width: 1000px) {
-    main div.statu img {
+    main div.statu #map {
         flex: 1 1 65%; 
-        max-width: 600px;
         max-height: 600px;
     }
 
@@ -282,7 +282,7 @@ main div.statu .data-wrap {
 }
 
 @media screen and (min-width: 1920px) {
-    main div.statu img {
+    main div.statu #map {
         flex: 1 1 75%; 
     }
 }

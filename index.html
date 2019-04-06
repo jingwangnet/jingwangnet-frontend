@@ -11,13 +11,17 @@
   <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet"> 
   <script>
+  /*
   function isIE() { //ie?
     if (!!window.ActiveXObject || "ActiveXObject" in window)
       return window.alert("ie浏览器功能严重缺失，为了更好的使用体验，请使用非ie浏览器访问");
     }
 
     window.onload=isIE()
+  */
   </script>
+  <script src="https://api.map.baidu.com/api?v=3.0&ak=s03VI1G6WmG0BG7a6EVGq006RICpo38i"></script>
+  
 </head>
 <body>
   <header>
@@ -42,7 +46,8 @@
   <main>
     <!-- statu start -->
     <div class="statu">
-      <img src="img/status.png" alt="status-img"> 
+      <div id="map">
+      </div>
       <div class="data-wrap">
         <h2>今日数据监测</h2>
         <div class="data">
@@ -378,6 +383,60 @@
   
   </footer>
   <script src="js/main.js"></script>
+
+  <script>
+  window.onload = getMyLocation;
+
+  function getMyLocation() {
+    if (BMap.Geolocation) {
+        var geolocation = new BMap.Geolocation();
+        geolocation.getCurrentPosition(displayLocation,{enableHighAccuracy: true});
+    } else {
+        alert('Your browser don\'t support geolocation');
+    }
+  }
+  
+  function displayLocation(r) {
+    if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+      /*
+      alert("longitude is: " + r.point.lng + "\nlatitude is:" + r.point.lat);
+      */
+      var lng = (r.point.lng);
+      var lat = (r.point.lat);
+      
+      var map = new BMap.Map("map");
+      var point = new BMap.Point(lng,lat);
+      // map.centerAndZoom(point, 11);
+      generateMap(map, point, 11)
+      // initianl current location map
+  
+      addMarker(map, point);
+      // Add marker
+  
+      map.addControl( new BMap.GeolocationControl());
+  
+    }
+    else {
+      alert('failed' + ' ' + this.getStatus());
+    }
+  }
+  
+  
+  function addMarker(map, point) {
+      var marker = new BMap.Marker(point);
+      map.addOverlay(marker);
+      marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+  }
+
+  function generateMap(map, point, level) {
+      map.centerAndZoom(point, level);
+      map.enableScrollWheelZoom(true);
+  }
+  
+
+
+  </script>
+
   <script>
     function openSelect(evt, obj) {
         var i, tabcontent, tablinks;
