@@ -23,7 +23,7 @@
   <script src="https://api.map.baidu.com/api?v=3.0&ak=s03VI1G6WmG0BG7a6EVGq006RICpo38i"></script>
   
 </head>
-<body>
+<body onresize="resizeMap()">
   <header>
   <h1>静网数据</h1>
   <p>一切为业务服务</p>
@@ -385,6 +385,9 @@
   <script src="js/main.js"></script>
 
   <script>
+  var map;
+  var point;
+
   window.onload = getMyLocation;
 
   function getMyLocation() {
@@ -404,8 +407,8 @@
       var lng = (r.point.lng);
       var lat = (r.point.lat);
       
-      var map = new BMap.Map("map");
-      var point = new BMap.Point(lng,lat);
+      map = new BMap.Map("map");
+      point = new BMap.Point(lng,lat);
       // map.centerAndZoom(point, 11);
       generateMap(map, point, 11)
       // initianl current location map
@@ -433,6 +436,9 @@
       map.enableScrollWheelZoom(true);
   }
   
+  function resizeMap() {
+      generateMap(map, point, 11)
+  }
 
 
   </script>
